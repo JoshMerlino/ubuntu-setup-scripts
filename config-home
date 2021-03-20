@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Link root to home dir
+ln -fs /root /home/root
+cd /home
+
+# Purge all old .bash* files
+sudo find -L . -name ".bash*" -type f -delete
+
+# Hide root login info
+touch /root/.hushlogin

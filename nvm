@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# install git
+sudo apt install git -y
+
+# Add NodeJS
+groupadd -f nvm
+git clone https://github.com/creationix/nvm.git /opt/nvm
+mkdir /usr/local/nvm
+mkdir /usr/local/node
+chown -R root:nvm /usr/local/nvm
+chmod -R 775 /usr/local/nvm
+chown -R root:nvm /usr/local/node
+chmod -R 775 /usr/local/node
+echo "export NVM_DIR=/usr/local/nvm" > /etc/profile.d/nvm.sh
+echo "source /opt/nvm/nvm.sh" >> /etc/profile.d/nvm.sh
+echo "export PATH=\"/usr/local/node/bin:\$PATH\"" >> /etc/profile.d/nvm.sh
+
+sudo apt-get install build-essential -y
+
+# Make profile executable
+sudo chmod +x /etc/profile
+sudo chmod +x /etc/profile.d/*.sh
+
+# Source all environments
+source /etc/profile

@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Set up no password
+groupadd -f nopasswd
+usermod -a -G nopasswd $USER
+echo "%nopasswd ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/nopasswd

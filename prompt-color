@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Set up color prompt
+echo "" > /etc/profile.d/bash_prompt.sh
+echo "#PS1='\e[30;41m \h \e[0m\e[31;101m\e[0m\e[0m\e[30;101m \u \e[0m\e[91;107m\e[0m\e[0m\e[30;107m \w \e[0m\e[97m\e[0m ' # RED" >> /etc/profile.d/bash_prompt.sh
+echo "#PS1='\e[30;42m \h \e[0m\e[32;102m\e[0m\e[0m\e[30;102m \u \e[0m\e[92;107m\e[0m\e[0m\e[30;107m \w \e[0m\e[97m\e[0m ' # GREEN" >> /etc/profile.d/bash_prompt.sh
+echo "#PS1='\e[30;43m \h \e[0m\e[33;103m\e[0m\e[0m\e[30;103m \u \e[0m\e[93;107m\e[0m\e[0m\e[30;107m \w \e[0m\e[97m\e[0m ' # YELLOW" >> /etc/profile.d/bash_prompt.sh
+echo "PS1='\e[30;44m \h \e[0m\e[34;104m\e[0m\e[0m\e[30;104m \u \e[0m\e[94;107m\e[0m\e[0m\e[30;107m \w \e[0m\e[97m\e[0m ' # BLUE" >> /etc/profile.d/bash_prompt.sh
+echo "#PS1='\e[30;45m \h \e[0m\e[35;105m\e[0m\e[0m\e[30;105m \u \e[0m\e[95;107m\e[0m\e[0m\e[30;107m \w \e[0m\e[97m\e[0m ' # MAGENTA" >> /etc/profile.d/bash_prompt.sh
+echo "#PS1='\e[30;46m \h \e[0m\e[36;106m\e[0m\e[0m\e[30;106m \u \e[0m\e[96;107m\e[0m\e[0m\e[30;107m \w \e[0m\e[97m\e[0m ' # CYAN" >> /etc/profile.d/bash_prompt.sh
+
+# Make profile executable
+sudo chmod +x /etc/profile
+sudo chmod +x /etc/profile.d/*.sh
+
+# Source all environments
+source /etc/profile
