@@ -56,7 +56,6 @@ chown -R root:nvm /usr/local/node
 chmod -R 775 /usr/local/node
 echo "export NVM_DIR=/usr/local/nvm" > /etc/profile.d/nvm.sh
 echo "source /opt/nvm/nvm.sh" >> /etc/profile.d/nvm.sh
-#echo "export NPM_CONFIG_PREFIX=/usr/local/node" >> /etc/profile.d/nvm.sh
 echo "export PATH=\"/usr/local/node/bin:\$PATH\"" >> /etc/profile.d/nvm.sh
 
 # Hide root login info
