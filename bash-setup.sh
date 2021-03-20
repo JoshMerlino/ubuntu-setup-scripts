@@ -29,7 +29,8 @@ echo "alias egrep='egrep --color=auto'" >> /etc/profile.d/bash_aliases.sh
 echo "alias ll='ls -alF'" >> /etc/profile.d/bash_aliases.sh
 echo "alias la='ls -A'" >> /etc/profile.d/bash_aliases.sh
 echo "alias l='ls -CF'" >> /etc/profile.d/bash_aliases.sh
-echo "alias bash='bash --init-file /etc/profile '" >> /etc/profile.d/bash_aliases.sh
+echo "alias bash='bash --init-file /etc/profile'" >> /etc/profile.d/bash_aliases.sh
+echo "alias sudo='sudo '" >> /etc/profile.d/bash_aliases.sh
 
 # If wsl setup
 if grep -q microsoft /proc/version; then echo "alias reboot=\"echo \\\"Run 'Get-Service LxssManager | Restart-Service' as administrator in PowerShell.\\\"\"" >> /etc/profile.d/bash_aliases.sh; fi
