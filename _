@@ -4,6 +4,7 @@ sudo apt -y upgrade
 
 sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/JoshMerlino/ubuntu-setup-scripts/main/nopasswd)"
 sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/JoshMerlino/ubuntu-setup-scripts/main/prompt-color)"
+sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/JoshMerlino/ubuntu-setup-scripts/main/docker)"
 sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/JoshMerlino/ubuntu-setup-scripts/main/deno)"
 sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/JoshMerlino/ubuntu-setup-scripts/main/nvm)"
 sudo su -c "bash <(wget -qO- https://raw.githubusercontent.com/JoshMerlino/ubuntu-setup-scripts/main/aliases)"
